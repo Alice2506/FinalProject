@@ -9,6 +9,20 @@ string Numbers(int n)
 }
 Console.WriteLine(Numbers(16));
 
+// Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+int Sum(int m, int n)
+{
+    int result = 0;
+    for (int i = m; i <= n; i++)
+    {
+        result = m + Sum(m + 1, n);
+    }
+    return result;
+}
+Console.WriteLine(Sum(2,6));
 
 
 
